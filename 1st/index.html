@@ -12,5 +12,14 @@
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+    <!-- React Code -->
+    <script>
+        const heading = React.createElement("h1",{}, "Hello World");
+
+        // root is created from a DOM element, we need to pass a dom element that will be considered as a root/parent from which reactDOM will render 
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading)
+    </script>
 </body>
 </html>
