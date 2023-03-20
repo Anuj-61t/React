@@ -1,22 +1,37 @@
 /**
- * CreateElement is a React Method to create a Core React Element
- * By passing 3 parameters (typeOfElement, {attributes written as key value pair}, Things that goes inside that element)
- * All parameters are properties of that element object other than the type of that element 
- * Here in heading variable is a object having properties return by react.createElement 
- * that are 
- * type: h1
- * props: { contains attributes and children } 
+ *  <div id="parent">
+ *   <div id="child-2">
+ *      <h1> I am heading 1 <h1/>
+ *      <h2> I am heading 2 <h2/>
+ *   </div>
+ * 
+ *   <div id="child-2">
+ *         <h1> I am heading 1 <h1/>
+ *         <h2> I am heading 2 <h2/>
+ *   </div>
+ * </div>
  */
-const heading = React.createElement("h1",{"id":"heading"}, "Hello World");
 
-// const somethingTag = React.createElement("something",{"something":"value"},"I am Something")
-// console.log(somethingTag)
-console.log(heading);
+const parent = React.createElement("div",{"id":"parent"}, 
+   [
+    React.createElement("div",{id: "child-2"}, [
+        React.createElement("h1", {}, "I am heading 1"),
+        React.createElement("h2", {}, "I am heading 2")
+    ]
+    ),
+    React.createElement("div",{id: "child-1"}, [
+        React.createElement("h1", {}, "I am heading 1"),
+        React.createElement("h2", {}, "I am heading 2")
+    ]
+    )
+   ]
+);
 
-// root is created from a DOM element, we need to pass a dom element that will be considered as a root/parent from which reactDOM will render 
+
+console.log(parent);
+ 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
-// ReactDOM render method will convert that object into an html tag with all the properties passed to that element
-root.render(heading)
+root.render(parent)
