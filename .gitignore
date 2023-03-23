@@ -1,5 +1,5 @@
 # compiled output
-/dist
+dist
 /tmp
 /out-tsc
 
@@ -87,3 +87,6 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#parcel cache
+.parcel-cache
