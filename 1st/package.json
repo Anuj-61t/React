@@ -1,0 +1,18 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is a react application",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "temp"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Anuj Mistry",
+  "license": "ISC"
+}
