@@ -14,5 +14,8 @@
     "react"
   ],
   "author": "Anuj Mistry",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
 }
